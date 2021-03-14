@@ -34,29 +34,40 @@ public class Main {
 		contagem.add(candidato4);
 		contagem.add(candidato5);
 
-		System.out.println(contagem);
-		int option = 0;
+		int option = 0, i = 0;
+		;
 
 		do {
 
 			System.out.println("Digite seu voto: ");
 			option = scan.nextInt();
-			
+
 			switch (option) {
 			case 1:
-				candidato1.setVotos(1);
+				i = candidato1.getVotos();
+				candidato1.setVotos(i++);
+
+				System.out.println(i);
 				break;
 
 			case 2:
+				i = candidato2.getVotos();
+				candidato1.setVotos(i++);
 				break;
 
 			case 3:
+				i = candidato3.getVotos();
+				candidato1.setVotos(i++);
 				break;
 
 			case 4:
+				i = candidato4.getVotos();
+				candidato1.setVotos(i++);
 				break;
 
 			case 5:
+				i = candidato5.getVotos();
+				candidato1.setVotos(i++);
 				break;
 
 			default:
