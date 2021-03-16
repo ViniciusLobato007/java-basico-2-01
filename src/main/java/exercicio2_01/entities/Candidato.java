@@ -2,20 +2,23 @@ package exercicio2_01.entities;
 
 public class Candidato {
 
-	private String id;
+	private int id;
 	private String name;
-	private Integer votos;
 
-	public Candidato(String name, Integer votos) {
-		this.name = name;
-		this.votos = votos;
+	public Candidato() {
+
 	}
 
-	public String getId() {
+	public Candidato(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -25,14 +28,6 @@ public class Candidato {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Integer getVotos() {
-		return votos;
-	}
-
-	public void setVotos(Integer votos) {
-		this.votos = votos;
 	}
 
 }
