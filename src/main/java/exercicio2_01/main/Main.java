@@ -21,7 +21,20 @@ public class Main {
 
 		inicializarMapaDeCandidatos();
 
-		obterVoto();
+		while (true) {
+
+			int voto = obterVoto();
+
+			if (voto == 0) {
+
+				break;
+			}
+
+			System.out.println("Número do voto: " + voto);
+		}
+
+		System.out.println("Finalizando aplicação...");
+
 	}
 
 	private void inicializarMapaDeCandidatos() {
@@ -56,6 +69,13 @@ public class Main {
 			System.out.println("Valor inválido!");
 			return -1;
 		}
+
+	}
+
+	private void registrarVoto(int voto) {
+
+//		NOME_MAPA.contaisKey(CHAVE_EM_QUESTAO);
+//		NOME_MAPA.get(CHAVE_EM_QUESTAo);
 
 	}
 }
