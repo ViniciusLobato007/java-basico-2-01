@@ -2,6 +2,7 @@ package exercicio2_01.main;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 import exercicio2_01.entities.Candidato;
 
@@ -19,6 +20,8 @@ public class Main {
 	private void start() {
 
 		inicializarMapaDeCandidatos();
+
+		obterVoto();
 	}
 
 	private void inicializarMapaDeCandidatos() {
@@ -39,4 +42,20 @@ public class Main {
 		mapaDeCandidato.put(monstralvao.getId(), monstralvao);
 	}
 
+	private int obterVoto() {
+
+		System.out.println("Digite seu voto: ");
+		Scanner scan = new Scanner(System.in);
+
+		try {
+			return scan.nextInt();
+
+		} catch (Exception e) {
+			scan.next();
+
+			System.out.println("Valor inválido!");
+			return -1;
+		}
+
+	}
 }
