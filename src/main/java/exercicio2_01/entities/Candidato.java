@@ -4,6 +4,7 @@ public class Candidato {
 
 	private int id;
 	private String name;
+	private int numeroDeVotos;
 
 	public Candidato() {
 
@@ -12,6 +13,10 @@ public class Candidato {
 	public Candidato(int id, String name) {
 		this.id = id;
 		this.name = name;
+	}
+	
+	public void adicionarVoto() {
+		this.numeroDeVotos += 1;
 	}
 
 	public int getId() {
@@ -28,6 +33,10 @@ public class Candidato {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getNumeroDeVotos() {
+		return numeroDeVotos;
 	}
 
 }

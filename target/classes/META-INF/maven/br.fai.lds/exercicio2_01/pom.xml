@@ -5,7 +5,11 @@
 	<groupId>br.fai.lds</groupId>
 	<artifactId>exercicio2_01</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	
+	<properties>
+		<java.version>13</java.version>
+	</properties>
+	
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
 		<dependency>
@@ -14,4 +18,5 @@
 			<version>2.4.1</version>
 		</dependency>
 	</dependencies>
+
 </project>
