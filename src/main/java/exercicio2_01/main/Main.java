@@ -2,7 +2,6 @@ package exercicio2_01.main;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -57,24 +56,39 @@ public class Main {
 			return b.getNumeroDeVotos() - a.getNumeroDeVotos();
 		});
 
-		/*
-		 * Neste trecho será feito a identificação de empate
-		 */
-		
+		System.out.println("Qntd de votos do Candidato 1: " + candidatos.get(0).getNumeroDeVotos());
+		System.out.println("Qntd de votos do Candidato 2: " + candidatos.get(1).getNumeroDeVotos());
+		System.out.println("Qntd de votos do Candidato 3: " + candidatos.get(2).getNumeroDeVotos());
+		System.out.println("Qntd de votos do Candidato 4: " + candidatos.get(3).getNumeroDeVotos());
+		System.out.println("Qntd de votos do Candidato 5: " + candidatos.get(4).getNumeroDeVotos());
+
+//		Neste trecho será feito a identificação de empate
 		List<Candidato> candidatosEmpatados = new ArrayList<Candidato>();
-		
+
+		int index = 0;
+		int j = 0;
+
 		for (Candidato candidato : candidatos) {
-			if(candidatos.get(1).getNumeroDeVotos() != candidatos.get(2).getNumeroDeVotos()) {
-//				Terminar trecho
+			if (candidatos.get(index + j).getNumeroDeVotos() == candidatos.get(index).getNumeroDeVotos()) {
+
+				System.out.println("Candidato " + (index + j) + " igual ao Candidato " + index);
+				j++;
+				candidatosEmpatados.addAll(candidatos);
 			}
 		}
-		
-		/*
-		 * Esse bloco exibe e ordena os candidatos
-		 */
+
+//		Trecho de vizualização dos candidatos empatados
+		index = 0;
+
+		for (Candidato candidato : candidatosEmpatados) {
+			System.out.println(candidatosEmpatados.get(index).getName());
+		}
+
+//		Esse bloco exibe e ordena os candidatos
+
 		Candidato candidatoEleito = candidatos.get(0);
 
-		System.out.println("O Candidato eleito é o " + candidatoEleito.getName() + " com, "
+		System.out.println("\nO Candidato eleito é o " + candidatoEleito.getName() + " com, "
 				+ candidatoEleito.getNumeroDeVotos() + " votos!");
 
 		for (int i = 0; i < candidatos.size(); i++) {
